@@ -2,7 +2,7 @@ import css from './form.module.css';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid'
 import { useState } from 'react';
-import { addContact } from '../../store/contacts/slice';
+import { addContactAsync } from '../../store/contacts/slice';
 
 export const ContactForm = () => {
 
@@ -38,7 +38,7 @@ export const ContactForm = () => {
             name: name.trim(),
             number: number
         }
-        dispatch(addContact(contact))
+        dispatch(addContactAsync(contact))
 
         setName('')
         setNumber('')

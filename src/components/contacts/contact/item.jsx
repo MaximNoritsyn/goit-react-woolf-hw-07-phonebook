@@ -1,12 +1,12 @@
 import css from './item.module.css';
-import { deleteContact } from '../../../store/contacts/slice';
+import { deleteContactAsync } from '../../../store/contacts/slice';
 import { useDispatch } from 'react-redux';
 
 export const ContactItem = ({ contact }) => {
     const dispatch = useDispatch();
 
     const deleleContactComponent = (id) => {
-        dispatch(deleteContact(id));
+        dispatch(deleteContactAsync(id));
     }
 
     return <li className={css.item}>
