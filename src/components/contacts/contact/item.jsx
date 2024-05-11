@@ -10,7 +10,7 @@ export const ContactItem = ({ contact }) => {
     }
 
     return <li className={css.item}>
-        <span>{contact.name}: {contact.number}</span>
+        <span>{contact.name}: {contact.phone}</span>
         <button className={css.buttonDelete} type='button' onClick={() => deleleContactComponent(contact.id)}>delete</button>
     </li>
 }
