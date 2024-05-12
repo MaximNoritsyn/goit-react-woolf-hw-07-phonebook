@@ -36,7 +36,7 @@ export const ContactForm = () => {
         const contact = {
             id: nanoid(),
             name: name.trim(),
-            number: number
+            phone: number
         }
         dispatch(addContactAsync(contact))
 
